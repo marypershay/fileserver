@@ -2,6 +2,7 @@ fs = require('fs');
 http = require('http');
 url = require('url');
 path = require("path");
+opts = require('optimist').argv;
 
 
 http.createServer(function(req, res){
@@ -24,8 +25,9 @@ http.createServer(function(req, res){
 			'</head>'+
 			'<body>'+
 			'<ul>'+
-			'<li>View <a href="/files/test.txt">test.txt</a></li>' +
-			'<li>View <a href="/files/video.mp4">Jake\'s Perfect Sandwich [HD].mp4</a></li>' +
+			'<li>View <a href="/files/test.txt">Text</a></li>' +
+			'<li>View <a href="/files/video.mp4">Video</a></li>' +
+			'<li>View <a href="/files/img.png">Image</a></li>' +
 			'</ul>'+
 			'</body>'+
 			'</html>';
@@ -54,4 +56,4 @@ http.createServer(function(req, res){
 
 	});
 
-}).listen(8080);
+}).listen(opts.port);
