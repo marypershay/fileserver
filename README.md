@@ -1,7 +1,7 @@
 # fileserver
 
 1.install app
-nmp install
+npm install
 2. run
 node index.js
 3. open
